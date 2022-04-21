@@ -18,26 +18,86 @@
 </head>
 <body>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+  <main>
+    <div class="page-wrapper">
+      <h1 class="title">Simple, traffic-based pricing</h1>
+      <p class="offer">
+          Sign-up for our 30-day trial. No credit card required. 
+      </p>
+      <div class="offer-card">
+        <h2 class="card-title"><span id="pageNumber"></span>  Pageviews</h2>
 
-  <input type="range" min="10000" max="1000000" step="10000">
+        <div class="slide-container">
+          <input type="range" min="0" max="4" value="3" class="slider" id="myRange">
+        </div>
 
-  Pageviews
-  $ /month
+        <h3 class="price">$ <span id="price"></span>.00<span class="end">/ month</span></h3>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+        <div class="billing-type">
+            <span class="monthly">Monthly Billing</span>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+            <label class="switch">
+              <input type="checkbox" id="sub-period">
+              <span class="slider"></span>
+            </label>
 
-  Start my trial
-  
-  <div class="attribution">
+            <span class="yearly">Yearly Billing</span>
+            <div class="discount">-25%</div>
+        </div>
+
+        <hr>
+
+        <ul class="benefits">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+
+        <button class="cta">Start my trial</button>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script>
+    const slider = document.getElementById('myRange');
+    const priceDisplay = document.getElementById('price');
+    const pageCount = document.getElementById('pageNumber')
+    const yearly = document.getElementById('sub-period');
+
+    const prices = [
+      {pages: '10K', price: 8},
+      {pages: '50K', price: 12},
+      {pages: '100K', price: 16},
+      {pages: '500K', price: 24},
+      {pages: '1M', price: 36} 
+    ]
+
+    let data = prices[slider.value];
+
+    const displayPrice = (data) => {
+      pageCount.innerHTML = data.pages;
+      priceDisplay.innerHTML = yearly.checked ? (data.price * 0.75) : data.price;
+
+
+    }
+
+    slider.oninput = () => {
+      data = prices[slider.value]
+      displayPrice(data)
+    }
+
+    yearly.onclick = () => {
+      displayPrice(data)
+    }
+
+    displayPrice(data)
+
+  </script>
 </body>
 </html>
