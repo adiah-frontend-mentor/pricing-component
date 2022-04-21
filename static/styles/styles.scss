@@ -1,0 +1,65 @@
+// Breakpoints
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+@mixin breakpoint-up($size){
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+
+// ------------------------------------------------------------------------
+
+// Variables
+
+$sliderBar: hsl(174, 77%, 80%);
+$sliderBg: hsl(174, 86%, 45%);
+$emptySliderBg: hsl(224, 65%, 95%);
+
+$discountBg: hsl(14, 92%, 95%);
+$discountText: hsl(15, 100%, 70%);
+$ctaText: hsl(226, 100%, 87%);
+$toggleBg: hsl(223, 50%, 87%);
+
+$pricingBg: #fff;
+$mainBg: hsl(230, 100%, 99%);
+$text: hsl(225, 20%, 60%);
+$altText: hsl(227, 35%, 25%);
+
+// Globals
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	font-family: 'Manrope', sans-serif;
+	font-weight: 600;
+	color: $text;
+	background-color: $mainBg;
+	background-image: url(../images/.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	line-height: 1.3;
+	min-height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include breakpoint-up(medium) {
+
+	}
+}
