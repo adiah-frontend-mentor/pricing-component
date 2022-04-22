@@ -25,13 +25,20 @@
           Sign-up for our 30-day trial. No credit card required. 
       </p>
       <div class="offer-card">
-        <h2 class="card-title"><span id="pageNumber"></span>  Pageviews</h2>
+        <div class="card-top">
+          <h2 class="card-title"><span id="pageNumber"></span>  Pageviews</h2>
 
-        <div class="slide-container">
-          <input type="range" min="0" max="4" value="3" class="slider" id="myRange">
+          <div class="slide-container">
+            <input type="range" min="0" max="4" value="3" class="slider" id="myRange">
+          </div>
+
+          <div class="price-container">
+            <h3 class="price">$<span id="price"></span>.00&nbsp;</h3>
+            <span class="end">/ month</span>
+          </div>
+
         </div>
 
-        <h3 class="price">$ <span id="price"></span>.00<span class="end">/ month</span></h3>
 
         <div class="billing-type">
             <span class="monthly">Monthly Billing</span>
@@ -42,18 +49,21 @@
             </label>
 
             <span class="yearly">Yearly Billing</span>
-            <div class="discount">-25%</div>
+            <div class="discount mobile">-25%</div>
+            <div class="discount desktop">25% discount</div>
         </div>
 
         <hr>
 
-        <ul class="benefits">
-          <li>Unlimited websites</li>
-          <li>100% data ownership</li>
-          <li>Email reports</li>
-        </ul>
+        <div class="card-bottom">
+          <ul class="benefits">
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
 
-        <button class="cta">Start my trial</button>
+          <button class="cta">Start my trial</button>
+        </div>
 
       </div>
     </div>

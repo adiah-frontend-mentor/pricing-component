@@ -10,11 +10,7 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 
@@ -32,6 +28,8 @@ Users should be able to:
 
 ![](./screenshot.png)
 
+![](./screenshot-mobile.png)
+
 
 
 ### Links
@@ -46,21 +44,9 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 
-
-### What I learned
-
-
-### Continued development
-
-
-### Useful resources
 
 ## Author
 
@@ -68,5 +54,4 @@ Users should be able to:
 - Frontend Mentor - [@nathanieladiah](https://www.frontendmentor.io/profile/nathanieladiah)
 
 
-## Acknowledgments
 
